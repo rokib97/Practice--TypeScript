@@ -125,6 +125,5 @@ let fullName = (first: string, second: any) => {
 };
 
 // when in doubts , check inference
-
 let MyRegEx = /\+g/;
 let MyRegExample: RegExp = /\+g/;
