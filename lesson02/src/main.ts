@@ -76,3 +76,55 @@ let isActive: number | boolean;
 let re = /\w+/g; // not sure so check the inference by mousehover to the variable
 
 let myRegEx: RegExp = /\w+/g; //accurate now
+
+// OverView
+
+// number type
+let myAge: number = 25;
+let MyNewAge: number;
+MyNewAge = 26;
+
+// string type
+let phoneName: string = "Samsung";
+let myPhoneName: string;
+myPhoneName = "Poco";
+
+// Boolean type
+let isSmart: boolean = true;
+let isLazy: boolean;
+isLazy = true;
+
+// Any Type
+let unKnown: any;
+unKnown = "hello";
+unKnown = true;
+unKnown = 10;
+
+// Union Type
+
+let choise: string | number;
+choise = 10;
+choise = "ishq dawana";
+let newChoise: string | boolean = true;
+console.log(typeof newChoise);
+
+// function parameter (any , specific, string over number preference)
+// // return any type
+// let fullName = (first: number, second: any) => {
+//   return first + second;
+// };
+
+// return string type
+// let fullName = (first: number, second: string) => {
+//   return first + second;
+// };
+
+// string return type
+let fullName = (first: string, second: any) => {
+  return first + second;
+};
+
+// when in doubts , check inference
+
+let MyRegEx = /\+g/;
+let MyRegExample: RegExp = /\+g/;
