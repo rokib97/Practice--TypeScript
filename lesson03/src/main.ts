@@ -1,7 +1,11 @@
 // Array type Inference
 let firstArr = ["rokib", "sakib", "hasan"]; // string type
-let secondArr = ["rokib", "sakib", 1050]; // any type
-let thirdArr = ["rokib", 100, true]; // any type
+let secondArr = ["rokib", "sakib", 1050]; // union type
+let thirdArr = ["rokib", 100, true]; // union type
+
+let example: string[] = ["rokib", "sakib", "hasan"]; // explicit assignment
+let example2: number[] = [10, 20, 30, 40]; // explicit assignment
+let example3: boolean[] = [true, false, true]; // explicit assignment
 
 // Array Assignments
 // firstArr[0] = 10 // can't because it accepts only string
@@ -10,7 +14,7 @@ firstArr.push("tani"); // on;y accepts string type data
 
 secondArr[0] = "new string"; //accepts becuse its union type
 secondArr.push(100); // also accepts because its accpets string | number
-// secondArr.push(false) // not accepting
+// secondArr.push(false); // not accepting
 
 thirdArr.push(true); // its accept because inside the array there are three type string , number , and boolean
 thirdArr.unshift("David");
@@ -84,7 +88,7 @@ myExampleObj.isActive = false; // accepted as its boolean data
 const newObj: {
   name: string;
   age: number;
-  isHandsome: false;
+  isHandsome: boolean;
 } = {
   name: "rokib",
   age: 25,
@@ -123,17 +127,17 @@ person2 = person3; // accepted but however if we don't provide the type Person i
 
 // Optional Object Peroperties
 
-// type Coder = {
-//   name: string;
-//   age?: number;
-//   isPro: boolean;
-// };
-// we can make interface too its works the same way
-interface Coder {
-  name?: string;
-  age: number;
+type Coder = {
+  name: string;
+  age?: number;
   isPro: boolean;
-}
+};
+// we can make interface too its works the same way
+// interface Coder {
+//   name?: string;
+//   age: number;
+//   isPro: boolean;
+// }
 
 let Rahim: Coder = {
   name: "Rahim",
@@ -143,6 +147,7 @@ let Rahim: Coder = {
 // we can also remove the age as its optional . (number | undefined) type data
 // no issue running this code
 let Karim: Coder = {
+  name: "karim",
   age: 26,
   isPro: false,
 };
