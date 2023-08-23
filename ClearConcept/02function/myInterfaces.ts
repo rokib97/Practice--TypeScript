@@ -10,13 +10,11 @@ interface USer {
 }
 
 // re opening interface
-
 interface USer {
   githubToken: string;
 }
 
 // inheritance in interface
-
 interface AdminCredential extends USer {
   role: "admin" | "seller" | "student";
 }
@@ -32,7 +30,7 @@ let myUser: AdminCredential = {
   endTrail: () => "example string return",
   //   getCouponCode: function (a = "rokib10") {
   //     return 10;
-  //   },
+  //   },s
   getCouponCode: (a = "rokib10", off = 10) => {
     return 10;
   },
