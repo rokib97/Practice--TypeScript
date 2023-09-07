@@ -120,7 +120,7 @@ const person3: Person = {
   name: "roqkeib",
   age: 27,
   isActive: true,
-  monthYear: ["January", "December"],
+  monthYear: ["January", "December", "November"],
 };
 
 person2 = person3; // accepted but however if we don't provide the type Person in the person3 object it won't accept the assignment
